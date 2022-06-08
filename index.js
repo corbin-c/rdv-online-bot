@@ -150,11 +150,11 @@ const main = async (init=false) => {
   if (!init) {
     availabilities = readJSONFromPath("./av.json");
   }
-  //~ await randomWait(60, 900);
+  await randomWait(60, 900);
   const sessionID = await getSessionID();
   for (const place of config) {
     console.log("working on:", place.name);
-    //~ await randomWait(30, 300);
+    await randomWait(30, 300);
     const reasonID = await getReasonID(place.id);
     await randomWait(1, 5);
     await unlock(sessionID);
@@ -198,10 +198,4 @@ ${better}
   }
 };
 
-//~ main();
-sendMail(
-  process.env.MAILUSER, 
-  process.env.MAILTO,
-  "[RDVBOT] Nouveaux rendez-vous",
-  "coucou"
-);
+main();
