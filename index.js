@@ -72,7 +72,7 @@ const mockFetch = (url, options) => {
 }
 
 const randomWait = (minSeconds, maxSeconds) => {
-  const delay = parseInt(Math.random()*(maxSeconds-minSeconds)+minSeconds);
+  const delay = Math.random()*(maxSeconds-minSeconds)+minSeconds;
   console.log("awaiting random time:", delay, "seconds");
   if (!wait) {
     return;
@@ -150,11 +150,11 @@ const main = async (init=false) => {
   if (!init) {
     availabilities = readJSONFromPath("./av.json");
   }
-  await randomWait(60, 900);
+  await randomWait(60, 600);
   const sessionID = await getSessionID();
   for (const place of config) {
     console.log("working on:", place.name);
-    await randomWait(30, 300);
+    await randomWait(30, 100);
     const reasonID = await getReasonID(place.id);
     await randomWait(1, 5);
     await unlock(sessionID);
