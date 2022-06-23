@@ -112,7 +112,7 @@ const mockFetch = (path, options) => {
 }
 
 const randomWait = (minSeconds, maxSeconds) => {
-  const delay = parseInt(Math.random()*(maxSeconds-minSeconds)+minSeconds);
+  const delay = Math.random()*(maxSeconds-minSeconds)+minSeconds;
   console.log("awaiting random time:", delay, "seconds");
   if (!wait) {
     return;
