@@ -1,6 +1,12 @@
 # Rendezvousonline Bot
 
-Un robot pour vous aider à trouver un rendez-vous rapide et proche de chez vous.
+Il est devenu parfois très difficile d'obtenir un rendez-vous en mairie/préfecture
+pour faire des papiers d'identité. Dans mon département, il faut compter environ 3
+mois d'attente.
+
+De nombreuses mairies utilisent le site <https://rendezvousonline.fr/>.
+
+Ce robot vous permet d'utiliser ce site pour vous aider à obtenir un rendez-vous rapide et proche de chez vous.
 
 Les disponibilités sont vérifiées périodiquement dans un périmètre géographique
 défini et des alertes email avec les nouveaux rendez-vous disponibles (désistements)
