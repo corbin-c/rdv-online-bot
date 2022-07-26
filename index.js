@@ -49,7 +49,7 @@ const readJSONFromPath = (path) => {
 const transporter = nodemailer.createTransport({
   host: process.env.MAILHOST,
   port: process.env.MAILPORT,
-  secure: (process.env.MAILSECURE === true),
+  secure: (process.env.MAILSECURE === "true"),
   auth: {
     user: process.env.MAILUSER,
     pass: process.env.MAILPWD,
